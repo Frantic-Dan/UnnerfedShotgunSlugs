@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+
+    <Name value="UnnerfedShotgunSlugs" />
+	<DisplayName value="Unnerfed Shotgun Slugs" />
+    <Description value="Reverts the damage that slugs did in A20 and prior" />
+    <Author value="FranticDan" />
+    <Version value="1.0" />
+    <Website value="" />
+
+</xml>
