@@ -1,0 +1,30 @@
+<config>
+
+	<set xpath="/items/item[@name='gunShotgunT0PipeShotgun']//property[@name='Tags']/@value">weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,stock,smallTopAttachments,noScopes,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill,gunPipeShotgun</set>
+	<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']//property[@name='Tags']/@value">weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,dBarrel,barrelAttachments,sideAttachments,stock,bottomAttachments,attStrength,perkBoomstick,canHaveCosmetic,attachmentsIncluded,shotgunSkill,gunDoubleShotgun</set>
+	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']//property[@name='Tags']/@value">weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic,shotgunSkill,gunPumpShotgun</set>
+	<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']//property[@name='Tags']/@value">weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,noScopes,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill,gunAutoShotgun</set>
+	
+	<set xpath="/items/item[@name='ammoShotgunSlug']/effect_group[1]//passive_effect[1]/@value">96</set>
+	
+	<insertafter xpath="/items/item[@name='ammoShotgunSlug']//effect_group[1]">
+		<effect_group> 
+			<requirement name="HoldingItemHasTags" tags="gunPipeShotgun"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="-18" tags="perkBoomstick"/>
+		</effect_group>
+		<effect_group> 
+			<requirement name="HoldingItemHasTags" tags="gunDoubleShotgun"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="9" tags="perkBoomstick"/>
+		</effect_group>
+		<effect_group> 
+			<requirement name="HoldingItemHasTags" tags="gunPumpShotgun"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="45" tags="perkBoomstick"/>
+		</effect_group>
+		<effect_group> 
+			<requirement name="HoldingItemHasTags" tags="gunAutoShotgun"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="90" tags="perkBoomstick"/>
+		</effect_group>
+	</insertafter>
+	
+	
+</config>
