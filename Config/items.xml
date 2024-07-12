@@ -7,20 +7,24 @@
 	
 	<set xpath="/items/item[@name='ammoShotgunSlug']/effect_group[1]//passive_effect[1]/@value">96</set>
 	
+	
 	<insertafter xpath="/items/item[@name='ammoShotgunSlug']//effect_group[1]">
-		<effect_group> 
+		<effect_group name="gunShotgunT0PipeShotgun" tiered="false"> 
 			<requirement name="HoldingItemHasTags" tags="gunPipeShotgun"/>
 			<passive_effect name="EntityDamage" operation="base_add" value="-18" tags="perkBoomstick"/>
 		</effect_group>
-		<effect_group> 
+	
+		<effect_group name="gunShotgunT1DoubleBarrel" tiered="false"> 
 			<requirement name="HoldingItemHasTags" tags="gunDoubleShotgun"/>
 			<passive_effect name="EntityDamage" operation="base_add" value="9" tags="perkBoomstick"/>
 		</effect_group>
-		<effect_group> 
+
+		<effect_group name="gunShotgunT2PumpShotgun" tiered="false"> 
 			<requirement name="HoldingItemHasTags" tags="gunPumpShotgun"/>
 			<passive_effect name="EntityDamage" operation="base_add" value="45" tags="perkBoomstick"/>
 		</effect_group>
-		<effect_group> 
+	
+		<effect_group name="gunShotgunT3AutoShotgun" tiered="false"> 
 			<requirement name="HoldingItemHasTags" tags="gunAutoShotgun"/>
 			<passive_effect name="EntityDamage" operation="base_add" value="90" tags="perkBoomstick"/>
 		</effect_group>
